@@ -61,6 +61,7 @@ class componentName extends Component {
         )
     }
 }
+
 export default componentName
 const container ={
     padding: "0 6rem"
