@@ -1,13 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Nav = () => {
     return (
         <div style={nav}>
-            <h1>IslahOlla</h1>
+            <h1><Link to ="/" style={to}>IslahOlla</Link></h1>
             <ul style={link}>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><Link to="/" style={to}> Home</Link></li>
+                <li><Link to="/about" style={to}> About</Link></li>
+                <li><Link to="/contact" style={to}> Contact</Link></li>
             </ul>
         </div>
     )
@@ -27,5 +28,11 @@ const link ={
     display :"flex",
     listStyle: 'none',
     justifyContent :"space-between",
-    width :"20%"
+    width :"20%",
+    
+}
+const to ={
+    cursor: 'pointer',
+    textDecoration: "none",
+    color:"#fff"
 }

@@ -1,11 +1,9 @@
 import React from 'react'
-import Footer from '../components/Footer'
-import Nav from '../components/Nav'
+import MainLayout from '../layout/MainLayout'
 
 const About = () => {
     return (
-        <div>
-            <Nav/>
+        <MainLayout>
             <div style={container}>
                 <h1>Page About</h1>
                 <p>
@@ -18,8 +16,7 @@ const About = () => {
                     Lorem commodo irure incididunt amet ipsum amet excepteur. Occaecat ut sit quis fugiat.    
                 </p>
             </div>
-            <Footer/>
-        </div>
+        </MainLayout>
     )
 }
 

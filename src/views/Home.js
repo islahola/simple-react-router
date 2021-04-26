@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Footer from '../components/Footer'
-import Nav from '../components/Nav'
+import MainLayout from '../layout/MainLayout'
+import {Link} from 'react-router-dom'
 export class Home extends Component {
     state = {
         skills :[
@@ -33,19 +33,19 @@ export class Home extends Component {
     render() {
         const {skills} = this.state
         return (
-            <div>
-                <Nav/>
+            <MainLayout>
                 <h1 style={{paddingLeft:"6rem"}}>Ini home</h1>
                 <div style={container}>
                     {skills.map (item =>
                         <div key ={item.id} style={card}>
-                            <img src={item.image.default} style={gambar} alt ={item.name}/>
-                            <h3>{item.name}</h3>
+                            <Link style={{textDecoration:"none", color:"#000"}} to={`/detail/${item.id}`}>
+                                <h3>{item.name}</h3>
+                                <img src={item.image.default} style={gambar} alt ={item.name}/>
+                            </Link>
                         </div>    
                     )}
                 </div>
-                <Footer/>
-            </div>
+            </MainLayout>
         )
     }
 }

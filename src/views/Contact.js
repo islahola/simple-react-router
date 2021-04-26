@@ -1,11 +1,8 @@
 import React from 'react'
-import Footer from '../components/Footer'
-import Nav from '../components/Nav'
-
+import MainLayout from '../layout/MainLayout'
 const Contact = () => {
     return (
-        <div>
-            <Nav/>
+        <MainLayout>
             <div style={container}>
                 <h1>Page Contact</h1>
                 <p>
@@ -18,8 +15,7 @@ const Contact = () => {
                     Lorem commodo irure incididunt amet ipsum amet excepteur. Occaecat ut sit quis fugiat.    
                 </p>
             </div>
-            <Footer/>
-        </div>
+        </MainLayout>
     )
 }
 
